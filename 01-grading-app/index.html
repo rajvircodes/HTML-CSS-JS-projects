@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <div class="header">
+            <h1>🎓 Student Grading System</h1>
+            <p>Calculate and track student grades with ease</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Grade Calculator -->
+            <div class="card">
+                <h2>📊 Grade Calculator</h2>
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" placeholder="Enter student name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject">
+                        <option value="">Select Subject</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Science">Science</option>
+                        <option value="English">English</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Computer Science">Computer Science</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="totalMarks">Total Marks:</label>
+                    <input type="number" id="totalMarks" placeholder="e.g., 100" min="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="obtainedMarks">Obtained Marks:</label>
+                    <input type="number" id="obtainedMarks" placeholder="e.g., 85" min="0">
+                </div>
+                
+                <button class="btn" onclick="calculateGrade()">Calculate Grade</button>
+                
+                <div id="gradeResult" class="grade-display">
+                    <div class="grade-letter" id="gradeLetter">A</div>
+                    <div class="grade-percentage" id="gradePercentage">85%</div>
+                    <div class="grade-status" id="gradeStatus">Excellent Performance!</div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card">
+                <h2>⚡ Quick Actions</h2>
+                <div class="form-group">
+                    <label for="bulkGrade">Bulk Grade Entry:</label>
+                    <select id="bulkGrade" onchange="addBulkGrade()">
+                        <option value="">Select Grade</option>
+                        <option value="A,90-100">A Grade (90-100%)</option>
+                        <option value="B,80-89">B Grade (80-89%)</option>
+                        <option value="C,70-79">C Grade (70-79%)</option>
+                        <option value="D,60-69">D Grade (60-69%)</option>
+                        <option value="F,0-59">F Grade (0-59%)</option>
+                    </select>
+                </div>
+</body>
+</html>
