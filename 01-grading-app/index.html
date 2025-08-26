@@ -68,5 +68,39 @@
                         <option value="F,0-59">F Grade (0-59%)</option>
                     </select>
                 </div>
+
+                <button class="btn" onclick="generateReport()">📈Generate Report</button>
+                <button class="btn clear-btn">🗑️Clear All Data</button>
+
+                <div class="status-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalStudent">0</div>
+                        <div class="state-label">Total Student</div>
+
+                        <div class="stat-number" id="averageGrade">0</div>
+                        <div class="state-label">Average Grade</div>
+                    </div>
+                </div>      
+            </div>  
+        </div> 
+            <div class="student-table">
+                <h2>📋Student Records</h2>
+                <tabble>
+                    <thead>
+                        <tr>
+                            <th>Student name</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>gradePercentage</th>
+                            <th>grade-display</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <!-- Student Rocord will be added here -->
+                    </tbody>
+                </tabble>
+            </div> 
+    </div>      
 </body>
 </html>
