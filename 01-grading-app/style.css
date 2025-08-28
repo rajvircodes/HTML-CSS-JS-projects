@@ -171,7 +171,7 @@ table {
 }
 
 thead {
-    background: linear-gradient(135deg, #667eea 0% #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
@@ -207,7 +207,12 @@ tbody tr:hover {
 }
 
 .grade-D {
-    color: #dc3545;
+    color: #8f3740;
+    font-weight: bold;
+}
+.grade-F {
+     color: #fb051d;
+    font-weight: bold;
 }
 
 .stats-grid {
