@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Quiz header -->
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h1 class="quiz-subtitle">
+          <i class="fa-solid fa-brain"></i> Knowledge Quize
+        </h1>
+        <p class="quiz-subtitle">Test Your General Knowledge</p>
+      </div>
+      <!-- Progress bar -->
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Start Screen -->
+      <d class="start-screen" id="startScreen">
+        <h2>Welcome to the Quiz</h2>
+        <p>Test your knowledge with our fun and challenging questions.</p>
+
+        <div class="quiz-info">
+
+          <div class="info-item">
+                <span class="info-label">Total Questions:</span>
+                <span class="info-value" id="totalQuestions">10</span>
+          </div>
+
+          <div class="infor-item">
+                <span class="infor-label">Time per questions:
+                </span>
+                <span class="infor-value">No limit</span>
+        </div>
+
+            <div class="infor-item">
+                <span class="infor-label">Psssing Score:
+                </span>
+                <span class="infor-value">70%</span>
+            </div>
+            
+                <button class="btn" onclick="startQuiz()">Start Quiz</button>
+            </div>
+                <!-- Quiz Content -->
+            <div class="quize-content" id="quize-content" style="display: none;">
+                <div class="question-container" id="questionContainer"></div>
+
+                  <div class="question" id="question"></div>
+                      Loading question...
+                  <div class="answers" id="answers"></div>
+                    <!-- Answer options will be generated here -->
+                <div class="quiz-buttons">
+                    <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn" disabled>
+                    ← Previous
+                    </button>
+                    <button class="btn" onclick="nextQuestion()" id="nextBtn" disabled>
+                    Next →
+                    </button>
+              </div>
+          </div>
+
+          <div class="resutl-screen" id="resutlScreen">
+             <h2>🎉 Quiz Completed!</h2>
+              <div class="score-circle">
+                 <div id="scorePercentage">85%</div>
+                <div class="score-text">Score</div>
+              </div>
+              <div class="results-message" id="resultsMessage">
+                Excellent work! You're a quiz champion!
+            </div>
+
+            <div class="result-details">
+               <div class="result-item">
+                    <div class="result-number" id="correctAnswers">8</div>
+                    <div class="result-label">Correct</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number" id="incorrectAnswers">2</div>
+                    <div class="result-label">Incorrect</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number" id="finalScore">80%</div>
+                    <div class="result-label">Final Score</div>
+                </div>
+            </div>
+             <button class="btn" onclick="restartQuiz()">🔄 Try Again</button>
+          </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
