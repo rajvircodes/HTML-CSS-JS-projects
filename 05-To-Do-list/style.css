@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.to-do-container {
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+
+}
+
+input {
+    width: 70%;
+    padding: 8px;
+    margin-right: 5px;
+
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    
+}
+
+li {
+    background: #e3f2fd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.delete-btn {
+    position: absolute;
+    right:10px;
+    top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
