@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Counter</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+
+    input, select, button {
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+        font-size: 16px;
+    }
+    input {
+        width:94%;
+    }
+ 
+</style>
+<body>
+    <div class="container">
+        <h2>Tip Calculator</h2>
+        <input type="number" id="billAmount" placeholder="Enter bill billAmount">
+
+        <select name="" id="tipPercent">
+            <option value="0.1">10%</option>
+            <option value="0.15">15%</option>
+            <option value="0.2">20%</option>
+        </select>
+
+        <button id="calculateBtn">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
