@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    body {
+        background:linear-gradient(135deg, #677eea 0%, #7664ba 100%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    button {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 8rem;
+        height: 3rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        background-color: rgb(190, 83, 101);
+        color: white;
+    }
+</style>
+<body>
+
+    <div class="container">
+        <h2 class="count">0</h2>
+        <button id="increment-btn"> 🔥Increment</button>
+        <button id="decrement-btn">👇Decrement</button>
+        <button id="reset-btn">🆕Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
