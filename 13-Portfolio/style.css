@@ -65,13 +65,13 @@ body {
 }
 
 .social-links a {
-  font-size: 30px;   /* Bigger icons */
+  font-size: 30px;   
   color: #333;
   transition: 0.3s;
 }
 
 .social-links a:hover {
-  color: #0077b5; /* LinkedIn blue by default on hover */
+  color: #0077b5; 
   transform: scale(1.2);
 }
 
