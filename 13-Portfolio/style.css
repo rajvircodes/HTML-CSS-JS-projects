@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.left-section .profile-pic img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.left-section h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.left-section .role {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.email-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 30px;   /* Bigger icons */
+  color: #333;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue by default on hover */
+  transform: scale(1.2);
+}
+
+/* Right Section */
+.right-section {
+  flex: 2;
+  background: #ddd;
+  padding: 50px;
+}
+
+.right-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.right-section p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  
+}
+
+.buttons button {
+  background: #333;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button {
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #555;
+    
+}
