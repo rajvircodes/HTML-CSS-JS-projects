@@ -111,6 +111,7 @@ body {
 button {
     transition: all 0.3s ease;
 }
+/* hover action */
 button:hover {
     background-color: #555;
     
