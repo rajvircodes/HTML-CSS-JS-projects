@@ -51,4 +51,5 @@ let score = 0;
 
   function startQuiz(){
     currebtQuestionIndex = 0;
+    
   }
