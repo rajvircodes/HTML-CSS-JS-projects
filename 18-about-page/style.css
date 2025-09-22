@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 100px; */
+    height: 100vh;
+    background-color: #333;
+}
+.container {
+    display: flex;
+    width: 80%;
+    height: 400px;
+    padding: 100px;
+    background-color: rgb(89, 130, 135);
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-section .role {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.left-section, .right-section {
+  width: 70%;
+  max-height: 100%;
+  padding: 80px 20px;
+}
+
+.right-section {
+    background-color: gray;
+    padding: 80px;
+}
+
+.right-section p {
+    margin-top: 20px;
+   
+}
+
+.left-section img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.btn {
+    background-color: rgb(46, 43, 43);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    margin:20px 0;
+    border-radius: 4px;
+    transition: background-color ease 0.3s;
+}
+
+.cta-btn {
+    margin-top: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 90px;
+    margin-top: 10px;
+}
+.icons i {
+    font-size: 28px;
+}
+
+
+.btn:hover {
+        background-color: rgb(0, 0, 0);
+
+}
