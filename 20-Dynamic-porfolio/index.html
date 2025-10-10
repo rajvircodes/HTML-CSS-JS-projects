@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="particle-container"></div>
+
+    <nav class="nav">
+
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contanct</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to My Universe</h1>
+            <p class="hero-subtile">Where creativity meets technology</p>
+            <a href="#about" class="cta-button">Explore More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h3>About Me</h3>
+        <div class="cards-container">
+             <div class="card" onclick="openModal('Creative Mind', 'I love bringing ideas to life through innovative design and interactive experiences.')">x
+                <h3>🎨 Creative Mind</h3>
+                <p>Passionate about creating beautiful, functional experiences that engage and inspire users.</p>
+            </div>
+            <div class="card" onclick="openModal('Problem Solver', 'Every challenge is an opportunity to learn something new and create something amazing.')">
+                <h3>🧩 Problem Solver</h3>
+                <p>I enjoy tackling complex challenges and finding elegant solutions through code.</p>
+            </div>
+            <div class="card" onclick="openModal('Team Player', 'Collaboration brings out the best ideas. I believe in the power of working together.')">
+                <h3>🤝 Team Player</h3>
+                <p>Collaboration and communication are key to creating amazing products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Skills" class="section">
+        <h2>Skills & Experties</h2>
+        <div class="skills-grid">
+            <div class="skill-item"         onclick="animateSkill(this)">
+                <span class="skill-icon">💻</span>
+                <h4>Frontend</h4>
+            </div>
+            <div class="skill-item"         onclick="animateSkill(this)">
+                <span class="skill-icon">🎨</span>
+                <h4>Design</h4>
+            </div>
+            <div class="skill-item"         onclick="animateSkill(this)">
+                <span class="skill-icon">📱</span>
+                <h4>Mobile</h4>
+            </div>
+            <div class="skill-item"         onclick="animateSkill(this)">
+                <span class="skill-icon">⚡</span>
+                <h4>Performance</h4>
+            </div>
+            <div class="skill-item"         onclick="animateSkill(this)">
+                <span class="skill-icon">⚒️</span>
+                <h4>Tools</h4>
+            </div>
+            <div class="skill-item"         onclick="animateSkill(this)">
+                <span class="skill-icon">🚀</span>
+                <h4>Innovation</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="contanct" class="section">
+            
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
