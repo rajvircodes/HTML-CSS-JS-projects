@@ -6,7 +6,7 @@ const colorCode = document.getElementById("colorCode");
 // Function to generate random hex color 
 
 function getRandomColor(){
-    let letters = "12346789ABCDEF";
+    let letters = "0123456789ABCDEF";
     let color = "#";
 
     for(let i = 0; i < 6; i++){
