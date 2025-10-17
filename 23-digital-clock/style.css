@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    color: #fff;
+    font-family:'Popins',sans-serif ;
+}
+
+.clock-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.clock {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
