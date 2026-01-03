@@ -1,0 +1,117 @@
+/* --- Global Styles & Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; 
+    color: #333;
+}
+
+/* --- Header & Title Styling --- */
+header {
+    background-color: #e74c3c; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* --- Container & List Layout --- */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.recipe-list {
+    list-style: none;
+    display: grid;
+   
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Individual Recipe Card Styling --- */
+.recipe-item {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Image Styling --- */
+.recipe-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Recipe Content --- */
+.recipe-item h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 15px 20px 5px;
+    color: #e74c3c;
+}
+
+.recipe-item p {
+    font-size: 0.95em;
+    padding: 0 20px 15px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.recipe-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* --- View Recipe Link Styling --- */
+.recipe-item a {
+    display: inline-block;
+    background-color: #3498db; 
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-item a:hover {
+    background-color: #2980b9;
+}
+
+
+/* --- Media Queries for smaller screens --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .container {
+        margin: 20px auto;
+    }
+    /* On smaller screens, allow the grid to collapse to single column */
+    .recipe-list {
+        grid-template-columns: 1fr;
+    }
+}
