@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: #212529;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    /* height: 100px; */
+    margin-bottom: 30px;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+.cart i {
+    font-size: 3rem;
+}
+
+.cartAmount {
+    position: absolute;
+    background-color: red;
+    top: -15px;
+    right: -10px;
+    color: white;
+    font-size: 1.3rem;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* Shop  items styling */
+
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4,223px);
+    gap: 30px;
+    justify-content: center;
+}
+
+@media (max-width:1000px) {
+    .shop {
+        grid-template-columns: repeat(2,223px);
+    }
+}
+
+@media (max-width:768px){
+
+    .shop {
+        grid-template-columns: repeat(1,223px);
+    }
+}
+
+.item {
+    border: 2px solid #212529;
+    border-radius: 4px;
+    height:450px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+}
+.price-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    font-size: 18 px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 4px;
+
+}
+
+.buttons i {
+     cursor: pointer;
+     border-radius: 2px;
+     padding: 2px;
+}
+
+.fa-minus {
+    color: white;
+    background-color: red;
+    
+}
+
+.fa-plus {
+    color: black;
+    background-color: green;
+   
+}
+
+.item img {
+    width: 220px;
+    height: 250px;
+
+}
+
+.cartShop {
+    color: green;
+    text-align: center;
+    border: 2px solid black;
+    display: block;
+}
+
+.newClass {
+    color: red;
+}
