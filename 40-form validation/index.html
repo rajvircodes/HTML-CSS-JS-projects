@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validaion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration form</h2>
+
+        <form onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="password" id="password" placeholder="Enter your password">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
