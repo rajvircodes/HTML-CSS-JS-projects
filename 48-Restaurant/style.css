@@ -1,0 +1,110 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 1. Blurred Background Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/res.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px); /* Your requested blur */
+  transform: scale(1.1); /* Prevents white edges */
+  z-index: -1;
+}
+
+/* 2. Main Container */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+}
+
+.shop-name {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* 3. The "Glass" Order Box */
+.shop {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Secondary glass blur */
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.shop-heading {
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* 4. Form Elements */
+#input-el {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #ff4757; /* Pizza Red */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+#btn:hover {
+  background: #ff6b81;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+}
+
+#btn:active {
+  transform: translateY(0);
+}
+
+/* Message Style */
+#msg {
+  margin-top: 20px;
+  /* font-weight: bold; */
+}
+
+.success {
+    color: red;
+}
+
+.error {
+    color: #2ed573;
+}
