@@ -1,70 +1,141 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #c5bbbb, #121212);
-    font-family: 'Popins', sans-serif;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-.calculator {
-   background-color: #1d1e1e;
-   border-radius: 15px;
-   padding: 20px;
-   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-   width: 320px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
 
-}
+        .calculator {
+            background-color: #1c1c1c;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+            width: 340px;
+        }
 
-#display {
-    width: 100%;
-    height: 60px;
-    background: #000;
-    color: #0f0;
-    font-size: 2rem;
-    text-align: right;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 15px;
-}
+        #display {
+            width: 100%;
+            height: 70px;
+            font-size: 2.5rem;
+            text-align: right;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 10px;
+            background-color: #1c1c1c;
+            color: #ffffff;
+            outline: none;
+        }
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-}
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
 
+        .btn {
+            height: 65px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px; /* Round buttons */
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            transition: all 0.2s ease;
+        }
 
-.btn {
-    height: 60px;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background:#333;
-    color: white;
-    transition: 0.2s;
-}
+        .btn:hover {
+            background-color: #444;
+        }
 
-.btn:hover {
-    background: #555;
-}
+        .btn:active {
+            transform: scale(0.95);
+        }
 
-.equal {
-    grid-column: span 2;
-    background: rgb(10, 115, 10);
-    color: #000;
-    font-weight: bold;
-}
+        /* Operator Colors */
+        .operator {
+            background-color: #ff9f0a;
+        }
 
-.equal:hover {
-    background:#0d4c0d;
-}
+        .operator:hover {
+            background-color: #ffb340;
+        }
+
+        .function {
+            background-color: #a5a5a5;
+            color: black;
+        }
+
+        .function:hover {
+            background-color: #d2d2d2;
+        }
+
+        .equal {
+            grid-column: span 2;
+            background-color: #30d158;
+            border-radius: 50px;
+        }
+
+        .equal:hover {
+            background-color: #40e369;
+        }
+
+        /* History Panel Styles */
+        .history-panel {
+            width: 340px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-height: 250px;
+            overflow-y: auto;
+            display: none; /* Hidden by default */
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .history-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .history-item {
+            padding: 8px;
+            border-bottom: 1px solid #f9f9f9;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #555;
+            transition: background 0.2s;
+        }
+
+        .history-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .clear-history-btn {
+            background: none;
+            border: none;
+            color: #ff3b30;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
