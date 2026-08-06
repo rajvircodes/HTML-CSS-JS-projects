@@ -1,23 +1,23 @@
+"use strict";
 const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
-
-sounds.forEach(sound => {
+const btnList = document.getElementById('buttons');
+sounds.forEach((sound) => {
     const btn = document.createElement('button');
     btn.classList.add('btn');
-
     btn.innerText = sound;
     btn.addEventListener("click", () => {
         stopSongs();
-
-        document.getElementById(sound).play();
+        const audio = document.getElementById(sound);
+        audio?.play();
     });
-    document.getElementById('buttons').appendChild(btn);
+    btnList.appendChild(btn);
 });
-
-function stopSongs(){
-    sounds.forEach(sound => {
+function stopSongs() {
+    sounds.forEach((sound) => {
         const song = document.getElementById(sound);
-
-        song.pause();
-        song.currentTime = 0;
+        if (song) {
+            song.pause();
+            song.currentTime = 0;
+        }
     });
 }
