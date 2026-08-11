@@ -1,5 +1,22 @@
-# Simple Calculator Web App
+# 11. Expanding Cards
 
-![calculator](./prev-img.png)
+Interactive expanding image panel cards built with **TypeScript** and **HTML/CSS**.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-🟢-brightgreen?style=for-the-badge&logo=vercel)](https://html-css-js-projects-makn.vercel.app/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=for-the-badge&logo=github)](https://github.com/rajvircodes/HTML-CSS-JS-projects/tree/main/24-calculator-app)
+![Expanding Cards](../screenshots/expanding-cards.png)
+
+## 🚀 Features
+
+- **Hover Expansion:** Dynamically expands cards on mouseover while collapsing inactive cards.
+- **Smooth Transitions:** Flexbox transitions for fluid animation effects.
+
+## 🛠️ TypeScript Learnings Implemented
+
+- **Generics with Query Selectors:** Leveraged `querySelectorAll<HTMLDivElement>()` for type-safe element collections.
+- **Callback Parameter Safety:** Strictly typed elements during `NodeList` array iterations.
+
+## 📦 Run Locally
+
+1. Compile TypeScript to JavaScript:
+   ```bash
+   npx tsc script.ts
+   ```
