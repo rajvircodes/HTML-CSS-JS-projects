@@ -1,8 +1,6 @@
-const inp = document.getElementById("text");
-let notes = document.getElementById("notes")
-
-inp.addEventListener("input",function(){
-    console.log(inp.value);
-    notes.textContent = inp.value;
-    
-})
+"use strict";
+const inputEl = document.getElementById("text");
+let notes = document.getElementById("notes");
+inputEl.addEventListener("input", function () {
+  notes.textContent = inputEl.value;
+});
