@@ -1,51 +1,56 @@
-let timer = 60;
-let score = 0;
-let hitrn = 0;
-
-function increaseScore(){
-  score += 10;
-  let scoreEl = document.getElementById("scoreval").textContent = score;
+"use strict";
+// State Variables
+let timerCount = 60;
+let currentScore = 0;
+let targetHitNumber = 0;
+let timerInterval;
+// DOM Elements
+const hitValEl = document.getElementById("hitval");
+const timerValEl = document.getElementById("timerValue");
+const scoreValEl = document.getElementById("scoreval");
+const panelBottomEl = document.querySelector(".pbottom");
+function increaseScore() {
+    currentScore += 10;
+    scoreValEl.textContent = currentScore.toString();
 }
-
-function getNewHit(){
-  hitrn = Math.floor(Math.random()*10);
-  let hitEl = document.getElementById("hitval").textContent = hitrn;
+function getNewHitNumber() {
+    targetHitNumber = Math.floor(Math.random() * 10);
+    hitValEl.textContent = targetHitNumber.toString();
 }
-
-
-function makeBubble() {
-  let clutter = "";
-  for (i = 1; i <= 70; i++) {
-    let bblNumber = Math.floor(Math.random() * 10);
-    clutter += `<div class="bubble">${bblNumber}</div>`;
-  }
-  
-  let pbt = (document.querySelector(".pbottom").innerHTML = clutter);
-}
-
-function runTimer() {
-  let timerint = setInterval(function () {
-    if (timer > 0) {
-      timer--;
-      let timerEl = (document.getElementById("timerValue").textContent = timer);
-    } else {
-      clearInterval(timerint);
-      document.querySelector(".pbottom").innerHTML = `<h1>Game over</h1>`;
+function makeBubbles() {
+    let bubblesHTML = "";
+    for (let i = 1; i <= 70; i++) {
+        const bubbleNumber = Math.floor(Math.random() * 10);
+        bubblesHTML += `<div class="bubble">${bubbleNumber}</div>`;
     }
-  }, 1000);
+    panelBottomEl.innerHTML = bubblesHTML;
 }
-
-document.querySelector(".pbottom").addEventListener("click",function(dets){
-  let clickedNumber = (Number(dets.target.textContent));
-  if(clickedNumber === hitrn){
-    increaseScore();
-    makeBubble();
-    getNewHit();
-  }
-  
+function startTimer() {
+    timerInterval = window.setInterval(() => {
+        if (timerCount > 0) {
+            timerCount--;
+            timerValEl.textContent = timerCount.toString();
+        }
+        else {
+            clearInterval(timerInterval);
+            panelBottomEl.innerHTML = `<h1 class="game-over">Game Over</h1>`;
+        }
+    }, 1000);
+}
+// Event Delegation with Type Guarding
+panelBottomEl.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    // Ensure click was specifically on a bubble
+    if (clickedElement.classList.contains("bubble")) {
+        const clickedNumber = Number(clickedElement.textContent);
+        if (clickedNumber === targetHitNumber) {
+            increaseScore();
+            makeBubbles();
+            getNewHitNumber();
+        }
+    }
 });
-
-runTimer();
-makeBubble();
-getNewHit();
-
+// Initialize Game
+startTimer();
+makeBubbles();
+getNewHitNumber();

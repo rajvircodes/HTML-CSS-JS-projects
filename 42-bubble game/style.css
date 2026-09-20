@@ -1,96 +1,114 @@
-
-
-
 :root {
-  --danger-color:purple;
+  --primary-color: #075d07;
+  --primary-hover: #0c3f0c;
+  --bg-main: #67ab8b;
+  --bg-panel: #f0fdf4;
+  --accent-text: #008000;
+  --white: #ffffff;
 }
 
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  height: 100%;
-  width: 100%;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
-    height: 100%;
-    width: 100%;
-    background-color: rgb(103, 171, 139);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .panel {
-    overflow: hidden;
-    height: 80%;
-    width: 80%;
-    border-radius: 10px;
-    background-color: azure;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  overflow: hidden;
+  height: 80vh;
+  width: 80vw;
+  max-width: 900px;
+  border-radius: 12px;
+  background-color: var(--bg-panel);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .ptop {
   display: flex;
-  padding: 0 30%;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   height: 100px;
   width: 100%;
-  background-color: #008000;
+  background-color: var(--accent-text);
+  padding: 0 20px;
 }
 
 .elem {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
-  color: white;
+  color: var(--white);
 }
 
 .elem h2 {
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
-
 .box {
-  background-color:white;
-  padding: 5px 20px;
-  color: green;
-  border-radius: 5px;
-  font-size: 25px;
+  background-color: var(--white);
+  padding: 6px 18px;
+  color: var(--accent-text);
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .pbottom {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   height: calc(100% - 100px);
   width: 100%;
   padding: 20px;
+  overflow-y: auto;
 }
 
 .bubble {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--white);
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: #075d07;
-  transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease;
   cursor: pointer;
+  user-select: none;
 }
 
 .bubble:hover {
-  background-color: #0c3f0c;
+  background-color: var(--primary-hover);
+  transform: scale(1.08);
+}
+
+.game-over {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-align: center;
 }

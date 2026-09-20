@@ -5,9 +5,6 @@
 
 An interactive, responsive web-based quiz application that presents multiple-choice questions with real-time score tracking.
 
-<Image src="image_agent_tag_7330746892987321119" alt="Quiz App Start Screen" caption="Quiz App Start Screen" />
-<Image src="image_agent_tag_16489311094056247348" alt="Quiz App Questions Screen" caption="Quiz App Question Interface" />
-
 ---
 
 ## 🛠️ Built With
