@@ -1,97 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
 
-        .container {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            width: 400px;
-        }
+      .container {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+      }
 
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
+      h2 {
+        text-align: center;
+        color: #333333;
+        margin-bottom: 30px;
+      }
 
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-            outline: none;
-            transition: border 0.3s;
-        }
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #dddddd;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
 
-        input:focus {
-            border-color: #667eea;
-        }
+      input:focus {
+        border-color: #667eea;
+      }
 
-        button {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
+      button {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
 
-        button:hover {
-            transform: translateY(-2px);
-        }
+      button:hover {
+        transform: translateY(-2px);
+      }
 
-        button:active {
-            transform: translateY(0);
-        }
+      button:active {
+        transform: translateY(0);
+      }
+
+      .alert-box {
+        display: none;
+        background-color: #4bb543;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h2>Register</h2>
-        <form id="registerForm">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="text" placeholder="City" required>
-            <button type="submit">Submit</button>
-        </form>
+      <h2>Register</h2>
+      <div id="alertBox" class="alert-box">Form submitted successfully!</div>
+      <form id="registerForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="City" required />
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
     <script>
-        const form = document.getElementById('registerForm');
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form submitted successfully');
-            form.reset();
-        });
+      const form = document.getElementById("registerForm");
+      const alertBox = document.getElementById("alertBox");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alertBox.style.display = "block";
+        form.reset();
+        setTimeout(() => {
+          alertBox.style.display = "none";
+        }, 3000);
+      });
     </script>
-</body>
+  </body>
 </html>
